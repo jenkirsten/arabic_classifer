@@ -9,7 +9,7 @@ def main():
    
     @st.cache_resource
     def load_model():
-        model = tf.keras.models.load_model('test_tube_classifier.hdf5')
+        model = tf.keras.models.load_model('model.h5')
         return model
     
     def import_and_predict(image_data, model):
@@ -22,9 +22,9 @@ def main():
         return prediction
 
     model = load_model()
-    class_names =  ["High", "Moderate", "No reducing sugar", "Traceable"]
+    class_names =  ['أ', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ى']
 
-    st.write("# Glucose Level (Benedict Solution) Classifier")
+    st.write("# Arabic Handwritten Classification")
    
     file = st.file_uploader("Choose photo from computer", type=["jpg", "png", "jpeg"])
 
@@ -36,7 +36,7 @@ def main():
         prediction = import_and_predict(image, model)
         class_index = np.argmax(prediction)
         class_name = class_names[class_index]
-        string = "Glucose Level: " + class_name
+        string = "Handwritten Output: " + class_name
         st.success(string)
  
 if __name__ == "__main__":
