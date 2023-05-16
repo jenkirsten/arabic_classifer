@@ -1,1 +1,2 @@
-# arabic_classifer
+# arabic_classifier
+
