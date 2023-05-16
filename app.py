@@ -24,7 +24,8 @@ def main():
     model = load_model()
     class_names =  ['أ', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ى']
 
-    st.write("# Arabic Handwritten Classification")
+    st.write("# 📝🧠 Arabic Handwritten Classification")
+    st.write("### Jenelle Kirsten Borja")
    
     file = st.file_uploader("Choose photo from computer", type=["jpg", "png", "jpeg"])
 
